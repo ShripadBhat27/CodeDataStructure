@@ -1,0 +1,29 @@
+Infix -> operand operator operand
+         a+b
+Postfix -> operand operand operator
+           ab+
+Prefix  -> operator operand operand
+           +ab
+
+Necessity of Postfix : Able to evaluate Complex Expression in single scan
+
+Conversion :
+*Parenthesis is compulsory , If not provided Complier will logically apply
+parenthesis .
+like a+b+c will be ((a+b)+c)
+*Parenthesis is done using precedence and association
+  Operator      Precedence(Decreasing Order)        Association
+  ()            5                                   L-R(Left to Right)
+  Unary         4                                   R-L
+  ^             3                                   R-L
+  * /           2                                   L-R
+  + -           1                                   L-R
+for e.x
+    infix -> a+b*c-d/e
+              a+b*c-de/
+              a+bc*-de/
+              abc*+-de/
+    postfix        abc*+de/-
+
+    infix -> a+b*c-d/e
+    postfix ->  abc*+de/-
